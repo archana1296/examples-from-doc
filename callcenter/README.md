@@ -25,8 +25,8 @@ reqThirdPartyIDP	|Set this value to true if customer expects to use third party 
 reqEnableGlobalSignIn	|Set to true if customer wants to opt for Global signin
 reqPrimaryInstanceName	|Source Connect Instance Name should be set here. This is used to support global resiliency feature
 reqSecondaryInstanceName	|Replica Connect Instance Name should be set here. This is used to support global resiliency feature
-reqSCVHealthCheckRole  |This is optional field required to run AWS Health Check. Role name should have a format of "*-SCVHealthCheckRole"
-reqSCVHealthCheckLambdaArn  |This is optional field required to run AWS Health Check in case of multiorg setup
+reqSCVHealthCheckRole  |This is optional field required to run AWS Health Check. Role name should have a format of "*-SCVHealthCheckRole" The format should be arn:aws:iam::<Customer Account Id>:role/<Prefix>-SCVHealthCheckRole
+reqSCVHealthCheckLambdaArn  |This is optional field required to run AWS Health Check in case of multiorg setup . The format of this field is arn:aws:lambda:us-west-2:<Customer Account Id>:function:<CSCVHealthCheckLambdaName>
 
 
 
