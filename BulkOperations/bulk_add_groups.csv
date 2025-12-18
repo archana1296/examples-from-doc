@@ -1,3 +1,3 @@
 Argument1,Argument2,Argument3,Argument4,Argument5,Argument6,BulkAction
 groupName1,groupAPIName1,groupDescription,,04vSB0000008v17YAA,00GSB00000Grlh72AB,AddGroups
-groupName2,groupAPIName2,groupDescription,arn:aws:connect:us-west-2:654211779695:instance/4fdf73a4-a6dd-474d-950e-eedf0263b858/routing-profile/0c16a4b8-0803-40ba-a92b-7e988439afbe,04vSB0000008v17YAA,00GSB00000Grlh72AB,AddGroups
+groupName2,groupAPIName2,groupDescription,arn:aws:connect:us-west-2:654211779XXX:instance/4fdf73a4-a6dd-474d-950e-eedf0263bXXX/routing-profile/0c16a4b8-0803-40ba-a92b-7e988439aXXX,04vSB0000008v17YAA,00GSB00000Grlh72AB,AddGroups
