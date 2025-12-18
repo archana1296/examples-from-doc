@@ -83,8 +83,10 @@
                 "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*SCVAccessBYOACConfigurationFunction*",
                 "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*TDGConfigurationFunction*",
                 "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*ContactDataSyncFunction*",
+                "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*SCVSecretConfigurator*",
                 "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:event-source-mapping*",
-                "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*SCVSecretConfigurator*"
+                "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*HealthCheckFunction*",
+                "arn:aws:lambda:*:<AWS_ACCOUNT_ID>:*S3BucketCorsConfigurationFunction*"
             ]
         },
         {
@@ -154,7 +156,10 @@
                 "arn:aws:iam::<AWS_ACCOUNT_ID>:role/*-ConnectCallRole*",
                 "arn:aws:iam::<AWS_ACCOUNT_ID>:role/*SCVCustomAccessRole",
                 "arn:aws:iam::<AWS_ACCOUNT_ID>:saml-provider/SalesforceServiceVoiceIdp",
-                "arn:aws:iam::<AWS_ACCOUNT_ID>:role/aws-service-role/*"
+                "arn:aws:iam::<AWS_ACCOUNT_ID>:role/aws-service-role/*",
+                "arn:aws:iam::<AWS_ACCOUNT_ID>:role/*-SCVTenantBucketWriteAccessRole",
+                "arn:aws:iam::<AWS_ACCOUNT_ID>:role/*-SCVHealthCheckLambdaExecutionRole",
+                "arn:aws:iam::<AWS_ACCOUNT_ID>:role/*-SCVHealthCheckRole"
             ]
         },
         {
@@ -174,7 +179,8 @@
                 "arn:aws:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*ContactCenterStack/*",
                 "arn:aws:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*ContactCenterStack*/*",
                 "arn:aws:cloudformation:*:<AWS_ACCOUNT_ID>:stack/SCVBYOATenantStack*/*",
-                "arn:aws:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*SCVTrafficDistributionStack/*"
+                "arn:aws:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*SCVTrafficDistributionStack/*",
+                "arn:aws:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*-SCVHealthCheckStack/*"
             ]
         },
         {
@@ -221,8 +227,7 @@
                 "connect:UpdateRoutingProfileDefaultOutboundQueue",
                 "connect:PutUserStatus",
                 "connect:CreatePredefinedAttribute",
-                "connect:DeletePredefinedAttribute",
-                "connect:DeleteInstance"
+                "connect:DeletePredefinedAttribute"
             ],
             "Resource": [
                 "arn:aws:connect:*:<AWS_ACCOUNT_ID>:/instance",

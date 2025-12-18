@@ -83,8 +83,10 @@
                 "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*SCVAccessBYOACConfigurationFunction*",
                 "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*TDGConfigurationFunction*",
                 "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*ContactDataSyncFunction*",
+                "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*SCVSecretConfigurator*",
                 "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:event-source-mapping*",
-                "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*SCVSecretConfigurator*"
+                "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*HealthCheckFunction*",
+                "arn:aws-us-gov:lambda:*:<AWS_ACCOUNT_ID>:*S3BucketCorsConfigurationFunction*"
             ]
         },
         {
@@ -154,7 +156,9 @@
                 "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:role/*-ConnectCallRole*",
                 "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:role/*SCVCustomAccessRole",
                 "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:saml-provider/SalesforceServiceVoiceIdp",
-                "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:role/aws-service-role/*"
+                "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:role/aws-service-role/*",
+                "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:role/*-SCVHealthCheckLambdaExecutionRole",
+                "arn:aws-us-gov:iam::<AWS_ACCOUNT_ID>:role/*-SCVHealthCheckRole"
             ]
         },
         {
@@ -174,7 +178,8 @@
                 "arn:aws-us-gov:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*ContactCenterStack/*",
                 "arn:aws-us-gov:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*ContactCenterStack*/*",
                 "arn:aws-us-gov:cloudformation:*:<AWS_ACCOUNT_ID>:stack/SCVBYOATenantStack*/*",
-                "arn:aws-us-gov:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*SCVTrafficDistributionStack/*"
+                "arn:aws-us-gov:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*SCVTrafficDistributionStack/*",
+                "arn:aws-us-gov:cloudformation:*:<AWS_ACCOUNT_ID>:stack/*-SCVHealthCheckStack*/*"
             ]
         },
         {
