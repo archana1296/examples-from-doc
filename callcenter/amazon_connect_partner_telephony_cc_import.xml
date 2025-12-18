@@ -34,8 +34,6 @@
         <item sortOrder="19" name="reqShowVendorStatusInfoAccess" label="Show Provider Status">true</item>
         <item sortOrder="20" name="reqEnhancedAgentStabilityAccess" label="Amazon Connect sfdc_pending Status">true</item>
         <item sortOrder="21" name="reqAlwaysShowVoiceExtension" label="Always Show Voice Extension">true</item>
-        <item sortOrder="22" name="reqSCVHealthCheckRole" label="Health Check Role">arn:aws:iam::XXXXXXXXXXXX:role/amazonConnectInstanceName-SCVHealthCheckRole</item>
-        <item sortOrder="23" name="reqSCVHealthCheckLambdaArn" label="Health Check Lambda ARN">arn:aws:lambda:us-west-2:XXXXXXXXXXXX:function:healthCheckLambda</item>
 
     </section>
 </callCenter>
