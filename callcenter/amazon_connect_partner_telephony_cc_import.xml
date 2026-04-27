@@ -34,6 +34,7 @@
         <item sortOrder="19" name="reqShowVendorStatusInfoAccess" label="Show Provider Status">true</item>
         <item sortOrder="20" name="reqEnhancedAgentStabilityAccess" label="Amazon Connect sfdc_pending Status">true</item>
         <item sortOrder="21" name="reqAlwaysShowVoiceExtension" label="Always Show Voice Extension">true</item>
+        <item sortOrder="22" name="reqTenantBucketWriteAccessRoleArn" label="Tenant Bucket Write Access Role ARN">arn:aws:iam::XXXXXXXXXXXX:role/SCVTenantBucketWriteAccessRole</item>
 
     </section>
 </callCenter>

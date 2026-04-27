@@ -3,44 +3,51 @@
   "StartAction": "7fd754e1-18e9-471b-834d-8f043e40ac60",
   "Metadata": {
     "entryPointPosition": {
-      "x": 14.4,
-      "y": 44
+      "x": -29.6,
+      "y": 293.6
     },
     "ActionMetadata": {
-      "4848a474-668d-47f0-8f15-ec7448127b4a": {
+      "39a1e5a9-6e6f-4c1f-9269-a073a34b288f": {
         "position": {
-          "x": 964.8,
-          "y": 387.2
+          "x": 2279.2,
+          "y": -886.4
         },
         "dynamicParams": []
       },
       "4a1a4ace-47f6-41cf-986c-2f8d1cf7af6d": {
         "position": {
-          "x": 958.4,
-          "y": 601.6
+          "x": 884.8,
+          "y": 484.8
         },
         "dynamicParams": []
       },
-      "7fd754e1-18e9-471b-834d-8f043e40ac60": {
-        "position": {
-          "x": 124.8,
-          "y": 24.8
-        }
-      },
       "058eb6c9-71d2-4916-9215-0ffd4cad6c3a": {
         "position": {
-          "x": 604,
-          "y": 591.2
+          "x": 613.6,
+          "y": 167.2
         }
+      },
+      "7fd754e1-18e9-471b-834d-8f043e40ac60": {
+        "position": {
+          "x": 128,
+          "y": 292.8
+        }
+      },
+      "4848a474-668d-47f0-8f15-ec7448127b4a": {
+        "position": {
+          "x": 858.4,
+          "y": -22.4
+        },
+        "dynamicParams": []
       },
       "82813f62-e8ee-43f5-8d98-e50a41aa5a15": {
         "position": {
-          "x": 390.4,
-          "y": -21.6
+          "x": 376,
+          "y": -176
         },
         "parameters": {
           "LambdaFunctionARN": {
-            "displayName": "stmhaq3oregon-InvokeTelephonyIntegrationApiFunction:active"
+            "displayName": "newcc-InvokeTelephonyIntegrationApiFunction:active"
           }
         },
         "dynamicMetadata": {
@@ -51,8 +58,8 @@
       },
       "43f9659c-6ada-4ae3-94a9-985bfda8dced": {
         "position": {
-          "x": 675.2,
-          "y": -17.6
+          "x": 610.4,
+          "y": -356
         },
         "parameters": {
           "Attributes": {
@@ -65,60 +72,44 @@
           "agentArn"
         ]
       },
-      "9bccf0c0-dc57-4edb-b262-9f289be201fc": {
+      "90e5ea74-ee4a-4138-8a40-a043585d9f1a": {
         "position": {
-          "x": 2233.6,
-          "y": -26.4
-        }
-      },
-      "39a1e5a9-6e6f-4c1f-9269-a073a34b288f": {
-        "position": {
-          "x": 1877.6,
-          "y": 62.4
-        },
-        "dynamicParams": []
-      },
-      "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9": {
-        "position": {
-          "x": 2579.2,
-          "y": 236.8
-        }
-      },
-      "7a0e3a7b-e5da-4ce3-a77f-696d3eac13f6": {
-        "position": {
-          "x": 1195.2,
-          "y": 68.8
-        }
-      },
-      "38508d68-2bbf-4dfc-af96-6e4501b102fb": {
-        "position": {
-          "x": 2229.6,
-          "y": 239.2
-        }
-      },
-      "b14328be-639f-4b5c-8ef2-8c4d77e1d2bd": {
-        "position": {
-          "x": 942.4,
-          "y": 25.6
+          "x": 3399.2,
+          "y": 572.8
         },
         "parameters": {
-          "AgentId": {
-            "useDynamic": true
+          "Media": {
+            "Uri": {
+              "useDynamic": true
+            }
           }
         },
         "useDynamic": true
       },
-      "1db8e227-572b-4bc7-a830-514ba1c41cd1": {
+      "cd0731d0-f11f-4d76-8cca-06e81af8e0e0": {
         "position": {
-          "x": 1806.4,
-          "y": 346.4
+          "x": 3720,
+          "y": 560.8
+        }
+      },
+      "3ba2c047-786b-4437-84db-f88249082eb4": {
+        "position": {
+          "x": 3991.2,
+          "y": 551.2
         },
-        "dynamicParams": []
+        "parameters": {
+          "ContactFlowId": {
+            "displayName": "Sample SCV Voicemail Subflow"
+          }
+        },
+        "ContactFlow": {
+          "text": "Sample SCV Voicemail Subflow"
+        }
       },
       "329366cd-ace6-432c-86ce-6ea73757563c": {
         "position": {
-          "x": 1575.2,
-          "y": 75.2
+          "x": 1944,
+          "y": -876.8
         },
         "parameters": {
           "ContactFlowId": {
@@ -129,10 +120,68 @@
           "text": "Sample SCV Transcription Subflow With Contact Lens"
         }
       },
+      "2b8ac416-a46c-4128-91cd-d7c481f15a50": {
+        "position": {
+          "x": 1376,
+          "y": -670.4
+        },
+        "conditions": [
+          {
+            "Condition": {
+              "Operands": [
+                {
+                  "unit": 60000
+                }
+              ]
+            }
+          }
+        ],
+        "conditionMetadata": [
+          {
+            "attribute": {
+              "name": "Time in Queue",
+              "value": "Time in Queue",
+              "internalValue": "CheckQueueTime"
+            },
+            "operator": {
+              "name": "Is greater than",
+              "value": "GreaterThan",
+              "shortDisplay": ">"
+            },
+            "value": "5",
+            "time": "min."
+          }
+        ]
+      },
+      "9bccf0c0-dc57-4edb-b262-9f289be201fc": {
+        "position": {
+          "x": 2235.2,
+          "y": 732
+        }
+      },
+      "1db8e227-572b-4bc7-a830-514ba1c41cd1": {
+        "position": {
+          "x": 1636.8,
+          "y": 320.8
+        },
+        "dynamicParams": []
+      },
+      "b14328be-639f-4b5c-8ef2-8c4d77e1d2bd": {
+        "position": {
+          "x": 852.8,
+          "y": -444
+        },
+        "parameters": {
+          "AgentId": {
+            "useDynamic": true
+          }
+        },
+        "useDynamic": true
+      },
       "f156b44f-e0c7-453b-9497-41dd81c8f878": {
         "position": {
-          "x": 1232.8,
-          "y": 308
+          "x": 1125.6,
+          "y": -278.4
         },
         "parameters": {
           "QueueId": {
@@ -140,11 +189,99 @@
           }
         },
         "useDynamic": true
+      },
+      "7a0e3a7b-e5da-4ce3-a77f-696d3eac13f6": {
+        "position": {
+          "x": 1115.2,
+          "y": -553.6
+        }
+      },
+      "77b63b3f-fe92-4204-9dfa-a7eed831982a": {
+        "position": {
+          "x": 1659.2,
+          "y": -820
+        },
+        "conditionMetadata": [
+          {
+            "id": "5ffa52c2-be48-4f8e-81c2-4198a0118fa3",
+            "value": "1"
+          },
+          {
+            "id": "3417cf40-c804-45d5-9616-05ad6b9234ca",
+            "value": "2"
+          }
+        ]
+      },
+      "b1f8fbdd-0c5f-438e-83bf-c16acb1f2d07": {
+        "position": {
+          "x": 2855.2,
+          "y": 569.6
+        },
+        "parameters": {
+          "Attributes": {
+            "recordingUrl": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "recordingUrl"
+        ]
+      },
+      "3bff689f-7342-4b16-88f6-67d593fbb69f": {
+        "position": {
+          "x": 2547.2,
+          "y": 24.8
+        },
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "newcc-InvokeVfsIntegrationApiFunction"
+          }
+        },
+        "dynamicMetadata": {
+          "methodName": false
+        }
+      },
+      "a2a71ee4-3963-4bad-83e5-73887bf9cfce": {
+        "position": {
+          "x": 3116,
+          "y": 587.2
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "aaa727f5-97cc-4299-a2a5-66878d85d0dd",
+            "operator": {
+              "name": "Starts with",
+              "value": "StartsWith",
+              "shortDisplay": "starts with"
+            },
+            "value": "s3"
+          }
+        ]
+      },
+      "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9": {
+        "position": {
+          "x": 4200.8,
+          "y": -228.8
+        }
+      },
+      "b1d23bc9-bf07-4103-be11-0a120179354f": {
+        "position": {
+          "x": 2268,
+          "y": 21.6
+        }
+      },
+      "38508d68-2bbf-4dfc-af96-6e4501b102fb": {
+        "position": {
+          "x": 2964.8,
+          "y": 280.8
+        }
       }
     },
     "Annotations": [],
     "name": "Sample SCV Direct to Rep Subflow",
-    "description": "Routes the call to the agent associated with the dialed number via omni direct to agent routing.",
+    "description": "Routes the call to a specific rep associated with the dialed number if they’re available and transfers the call to the Sample SCV Transcription Subflow With Contact Lens.",
     "type": "contactFlow",
     "status": "PUBLISHED",
     "hash": {}
@@ -153,11 +290,11 @@
     {
       "Parameters": {
         "Attributes": {
-          "error": "Failed to parse the result of the omni routing lambda."
+          "error": "Failed to transfer to transcription flow."
         },
         "TargetContact": "Current"
       },
-      "Identifier": "4848a474-668d-47f0-8f15-ec7448127b4a",
+      "Identifier": "39a1e5a9-6e6f-4c1f-9269-a073a34b288f",
       "Type": "UpdateContactAttributes",
       "Transitions": {
         "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
@@ -190,22 +327,6 @@
     },
     {
       "Parameters": {
-        "Text": "Welcome to Voice for Sales"
-      },
-      "Identifier": "7fd754e1-18e9-471b-834d-8f043e40ac60",
-      "Type": "MessageParticipant",
-      "Transitions": {
-        "NextAction": "82813f62-e8ee-43f5-8d98-e50a41aa5a15",
-        "Errors": [
-          {
-            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
         "Text": "Omni Routing Failed"
       },
       "Identifier": "058eb6c9-71d2-4916-9215-0ffd4cad6c3a",
@@ -222,8 +343,44 @@
     },
     {
       "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:593793031641:function:orgFarm2Varun-InvokeTelephonyIntegrationApiFunction:active",
+        "Text": "Welcome to Voice for Sales"
+      },
+      "Identifier": "7fd754e1-18e9-471b-834d-8f043e40ac60",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "82813f62-e8ee-43f5-8d98-e50a41aa5a15",
+        "Errors": [
+          {
+            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "error": "Failed to parse the result of the omni routing lambda."
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "4848a474-668d-47f0-8f15-ec7448127b4a",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+        "Errors": [
+          {
+            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:160244693883:function:vfsSdb272OregCC1-InvokeTelephonyIntegrationApiFunction:active",
         "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
         "LambdaInvocationAttributes": {
           "flowInput-recordId": "$.Attributes.voiceCallId",
           "methodName": "executeOmniFlow",
@@ -266,6 +423,105 @@
     },
     {
       "Parameters": {
+        "Media": {
+          "Uri": "$.Attributes.recordingUrl",
+          "SourceType": "S3",
+          "MediaType": "Audio"
+        }
+      },
+      "Identifier": "90e5ea74-ee4a-4138-8a40-a043585d9f1a",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "cd0731d0-f11f-4d76-8cca-06e81af8e0e0",
+        "Errors": [
+          {
+            "NextAction": "cd0731d0-f11f-4d76-8cca-06e81af8e0e0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Please drop a voicemail note to the Rep"
+      },
+      "Identifier": "cd0731d0-f11f-4d76-8cca-06e81af8e0e0",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "3ba2c047-786b-4437-84db-f88249082eb4",
+        "Errors": [
+          {
+            "NextAction": "3ba2c047-786b-4437-84db-f88249082eb4",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ContactFlowId": "arn:aws:connect:us-west-2:160244693883:instance/692e2101-d131-40ac-a40c-efca257fee80/contact-flow/6bf402ba-914c-4223-b417-36e0aa838bc3"
+      },
+      "Identifier": "3ba2c047-786b-4437-84db-f88249082eb4",
+      "Type": "TransferToFlow",
+      "Transitions": {
+        "NextAction": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
+        "Errors": [
+          {
+            "NextAction": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ContactFlowId": "arn:aws:connect:us-west-2:160244693883:instance/692e2101-d131-40ac-a40c-efca257fee80/contact-flow/235729e1-bb9d-4c24-a767-ba9671979c3b"
+      },
+      "Identifier": "329366cd-ace6-432c-86ce-6ea73757563c",
+      "Type": "TransferToFlow",
+      "Transitions": {
+        "NextAction": "39a1e5a9-6e6f-4c1f-9269-a073a34b288f",
+        "Errors": [
+          {
+            "NextAction": "39a1e5a9-6e6f-4c1f-9269-a073a34b288f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "MetricType": "OldestContactInQueueAgeSeconds"
+      },
+      "Identifier": "2b8ac416-a46c-4128-91cd-d7c481f15a50",
+      "Type": "CheckMetricData",
+      "Transitions": {
+        "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+        "Conditions": [
+          {
+            "NextAction": "77b63b3f-fe92-4204-9dfa-a7eed831982a",
+            "Condition": {
+              "Operator": "NumberGreaterThan",
+              "Operands": [
+                "300000"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "329366cd-ace6-432c-86ce-6ea73757563c",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
         "Text": "I'm sorry. We have encountered an error and cannot currently handle your call. Please try again later. We apologize for any inconvenience. Goodbye."
       },
       "Identifier": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
@@ -275,94 +531,6 @@
         "Errors": [
           {
             "NextAction": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "Attributes": {
-          "error": "Failed to transfer to transcription flow."
-        },
-        "TargetContact": "Current"
-      },
-      "Identifier": "39a1e5a9-6e6f-4c1f-9269-a073a34b288f",
-      "Type": "UpdateContactAttributes",
-      "Transitions": {
-        "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
-        "Errors": [
-          {
-            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {},
-      "Identifier": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
-      "Type": "DisconnectParticipant",
-      "Transitions": {}
-    },
-    {
-      "Parameters": {
-        "MetricType": "NumberOfAgentsOnline"
-      },
-      "Identifier": "7a0e3a7b-e5da-4ce3-a77f-696d3eac13f6",
-      "Type": "CheckMetricData",
-      "Transitions": {
-        "NextAction": "1db8e227-572b-4bc7-a830-514ba1c41cd1",
-        "Conditions": [
-          {
-            "NextAction": "329366cd-ace6-432c-86ce-6ea73757563c",
-            "Condition": {
-              "Operator": "NumberGreaterThan",
-              "Operands": [
-                "0"
-              ]
-            }
-          }
-        ],
-        "Errors": [
-          {
-            "NextAction": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
-            "ErrorType": "NoMatchingCondition"
-          },
-          {
-            "NextAction": "1db8e227-572b-4bc7-a830-514ba1c41cd1",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "Text": "Agent is unavailable. Try again later."
-      },
-      "Identifier": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
-      "Type": "MessageParticipant",
-      "Transitions": {
-        "NextAction": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
-        "Errors": [
-          {
-            "NextAction": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "AgentId": "$.Attributes.agentArn"
-      },
-      "Identifier": "b14328be-639f-4b5c-8ef2-8c4d77e1d2bd",
-      "Type": "UpdateContactTargetQueue",
-      "Transitions": {
-        "NextAction": "7a0e3a7b-e5da-4ce3-a77f-696d3eac13f6",
-        "Errors": [
-          {
-            "NextAction": "f156b44f-e0c7-453b-9497-41dd81c8f878",
             "ErrorType": "NoMatchingError"
           }
         ]
@@ -389,15 +557,15 @@
     },
     {
       "Parameters": {
-        "ContactFlowId": "arn:aws:connect:us-west-2:593793031641:instance/749f895a-a86b-4024-83aa-8d21a4ef8540/contact-flow/520accf3-3088-4527-8c97-1a68933f24f5"
+        "AgentId": "$.Attributes.agentArn"
       },
-      "Identifier": "329366cd-ace6-432c-86ce-6ea73757563c",
-      "Type": "TransferToFlow",
+      "Identifier": "b14328be-639f-4b5c-8ef2-8c4d77e1d2bd",
+      "Type": "UpdateContactTargetQueue",
       "Transitions": {
-        "NextAction": "39a1e5a9-6e6f-4c1f-9269-a073a34b288f",
+        "NextAction": "7a0e3a7b-e5da-4ce3-a77f-696d3eac13f6",
         "Errors": [
           {
-            "NextAction": "39a1e5a9-6e6f-4c1f-9269-a073a34b288f",
+            "NextAction": "f156b44f-e0c7-453b-9497-41dd81c8f878",
             "ErrorType": "NoMatchingError"
           }
         ]
@@ -410,10 +578,215 @@
       "Identifier": "f156b44f-e0c7-453b-9497-41dd81c8f878",
       "Type": "UpdateContactTargetQueue",
       "Transitions": {
-        "NextAction": "329366cd-ace6-432c-86ce-6ea73757563c",
+        "NextAction": "2b8ac416-a46c-4128-91cd-d7c481f15a50",
         "Errors": [
           {
             "NextAction": "1db8e227-572b-4bc7-a830-514ba1c41cd1",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "MetricType": "NumberOfAgentsOnline"
+      },
+      "Identifier": "7a0e3a7b-e5da-4ce3-a77f-696d3eac13f6",
+      "Type": "CheckMetricData",
+      "Transitions": {
+        "NextAction": "1db8e227-572b-4bc7-a830-514ba1c41cd1",
+        "Conditions": [
+          {
+            "NextAction": "2b8ac416-a46c-4128-91cd-d7c481f15a50",
+            "Condition": {
+              "Operator": "NumberGreaterThan",
+              "Operands": [
+                "0"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "b1d23bc9-bf07-4103-be11-0a120179354f",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "1db8e227-572b-4bc7-a830-514ba1c41cd1",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Your wait time to speak with an agent is greater than 5 minutes. Press 1 or stay on the phone to wait. Press 2 to drop a voicemail message to rep."
+      },
+      "Identifier": "77b63b3f-fe92-4204-9dfa-a7eed831982a",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+        "Conditions": [
+          {
+            "NextAction": "329366cd-ace6-432c-86ce-6ea73757563c",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "b1d23bc9-bf07-4103-be11-0a120179354f",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "9bccf0c0-dc57-4edb-b262-9f289be201fc",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "recordingUrl": "$.External.recordingUrl"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "b1f8fbdd-0c5f-438e-83bf-c16acb1f2d07",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "a2a71ee4-3963-4bad-83e5-73887bf9cfce",
+        "Errors": [
+          {
+            "NextAction": "a2a71ee4-3963-4bad-83e5-73887bf9cfce",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:160244693883:function:vfsSdb272OregCC1-InvokeVfsIntegrationApiFunction:active",
+        "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "methodName": "getVoicemailGreeting"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "3bff689f-7342-4b16-88f6-67d593fbb69f",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "b1f8fbdd-0c5f-438e-83bf-c16acb1f2d07",
+        "Errors": [
+          {
+            "NextAction": "b1d23bc9-bf07-4103-be11-0a120179354f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Attributes.recordingUrl"
+      },
+      "Identifier": "a2a71ee4-3963-4bad-83e5-73887bf9cfce",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
+        "Conditions": [
+          {
+            "NextAction": "90e5ea74-ee4a-4138-8a40-a043585d9f1a",
+            "Condition": {
+              "Operator": "TextStartsWith",
+              "Operands": [
+                "s3"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "LoopCount": "2"
+      },
+      "Identifier": "b1d23bc9-bf07-4103-be11-0a120179354f",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
+        "Conditions": [
+          {
+            "NextAction": "3bff689f-7342-4b16-88f6-67d593fbb69f",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Agent is unavailable. Try again later."
+      },
+      "Identifier": "38508d68-2bbf-4dfc-af96-6e4501b102fb",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "cd0731d0-f11f-4d76-8cca-06e81af8e0e0",
+        "Errors": [
+          {
+            "NextAction": "d35a3ab7-eed0-468f-b3cf-f626bc22c1e9",
             "ErrorType": "NoMatchingError"
           }
         ]

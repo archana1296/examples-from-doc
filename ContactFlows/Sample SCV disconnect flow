@@ -1,6 +1,6 @@
 {
   "Version": "2019-10-30",
-  "StartAction": "f2277eda-f6eb-43c0-aac9-204e9c60074b",
+  "StartAction": "1fc7bb8f-2fe3-4615-a6ef-1020d774ccd4",
   "Metadata": {
     "entryPointPosition": {
       "x": 192,
@@ -13,73 +13,10 @@
           "y": 461.6
         }
       },
-      "f2277eda-f6eb-43c0-aac9-204e9c60074b": {
+      "1fc7bb8f-2fe3-4615-a6ef-1020d774ccd4": {
         "position": {
           "x": 292.8,
-          "y": 515.2
-        },
-        "conditions": [],
-        "conditionMetadata": [
-          {
-            "id": "66b87462-dcef-4654-9a70-420d2ed2b3c5",
-            "operator": {
-              "name": "Equals",
-              "value": "Equals",
-              "shortDisplay": "="
-            },
-            "value": "CHAT"
-          },
-          {
-            "id": "78fa9b01-db78-4b9e-9faf-3c0ce4c274dd",
-            "operator": {
-              "name": "Equals",
-              "value": "Equals",
-              "shortDisplay": "="
-            },
-            "value": "VOICE"
-          },
-          {
-            "id": "790e1611-440b-48e7-90fc-9e697ea587ca",
-            "operator": {
-              "name": "Equals",
-              "value": "Equals",
-              "shortDisplay": "="
-            },
-            "value": "TASK"
-          }
-        ]
-      },
-      "409c6c6a-7149-4591-8fe8-0c40d3fffb0d": {
-        "position": {
-          "x": 555.2,
-          "y": 601.6
-        },
-        "conditions": [],
-        "conditionMetadata": [
-          {
-            "id": "ab485cde-66f2-4efe-9c36-80b4911c9b11",
-            "operator": {
-              "name": "Equals",
-              "value": "Equals",
-              "shortDisplay": "="
-            },
-            "value": "Enable"
-          }
-        ]
-      },
-      "0e447aca-1234-4a50-bc8f-c3c4a5c96b25": {
-        "position": {
-          "x": 788,
-          "y": 584.8
-        },
-        "parameters": {
-          "LambdaFunctionARN": {
-            "displayName": "resellSdb6OregCC1-InvokeSalesforceRestApiFunction:active"
-          }
-        },
-        "dynamicMetadata": {
-          "agentARN": false,
-          "methodName": false
+          "y": 781.6
         }
       },
       "b37990b8-afcf-4ae3-97d6-3d4093345a94": {
@@ -98,25 +35,110 @@
       },
       "4de600cf-a471-4515-b79f-464b2807524c": {
         "position": {
-          "x": 609.6,
-          "y": 829.6
+          "x": 608,
+          "y": 828
         },
         "parameters": {
           "Attributes": {
-            "GreetingUrl": {
+            "recordingUrl": {
               "useDynamic": true
             }
           }
         },
         "dynamicParams": [
-          "GreetingUrl"
+          "recordingUrl"
         ]
+      },
+      "71f55c36-e1cc-40d0-843e-42ef701d0322": {
+        "position": {
+          "x": 812,
+          "y": 1000.8
+        },
+        "conditionMetadata": [
+          {
+            "id": "11887020-196c-40de-a8bc-80b35e46b7e9",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Not found"
+          }
+        ]
+      },
+      "f2277eda-f6eb-43c0-aac9-204e9c60074b": {
+        "position": {
+          "x": 292,
+          "y": 514.4
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "b302955c-4771-4393-8414-a86863cf351b",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "CHAT"
+          },
+          {
+            "id": "5a388698-790c-4b3c-9c0b-1bb9706c0fb0",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "VOICE"
+          },
+          {
+            "id": "f1624c52-4346-4dba-98c0-0e9d9d7acca6",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "TASK"
+          }
+        ]
+      },
+      "0e447aca-1234-4a50-bc8f-c3c4a5c96b25": {
+        "position": {
+          "x": 788,
+          "y": 584.8
+        },
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "sdb38resellcc1-InvokeVfsIntegrationApiFunction:active"
+          }
+        },
+        "dynamicMetadata": {
+          "methodName": false
+        }
       },
       "993e1553-7ddc-42a5-b152-ee955051a563": {
         "position": {
           "x": 1044,
           "y": 837.6
         }
+      },
+      "409c6c6a-7149-4591-8fe8-0c40d3fffb0d": {
+        "position": {
+          "x": 554.4,
+          "y": 600.8
+        },
+        "conditions": [],
+        "conditionMetadata": [
+          {
+            "id": "e84a6054-8d7b-4569-ba90-5528fd9b0f30",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "Enable"
+          }
+        ]
       }
     },
     "Annotations": [],
@@ -132,6 +154,82 @@
       "Identifier": "1d094c52-c5bf-4708-bcb6-2defb87d0de5",
       "Type": "DisconnectParticipant",
       "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "1fc7bb8f-2fe3-4615-a6ef-1020d774ccd4",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "f2277eda-f6eb-43c0-aac9-204e9c60074b"
+      }
+    },
+    {
+      "Parameters": {
+        "Media": {
+          "Uri": "$.External.recordingUrl",
+          "SourceType": "S3",
+          "MediaType": "Audio"
+        }
+      },
+      "Identifier": "b37990b8-afcf-4ae3-97d6-3d4093345a94",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
+        "Errors": [
+          {
+            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "recordingUrl": "$.External.recordingUrl"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "4de600cf-a471-4515-b79f-464b2807524c",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "71f55c36-e1cc-40d0-843e-42ef701d0322",
+        "Errors": [
+          {
+            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.External.recordingUrl"
+      },
+      "Identifier": "71f55c36-e1cc-40d0-843e-42ef701d0322",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "b37990b8-afcf-4ae3-97d6-3d4093345a94",
+        "Conditions": [
+          {
+            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "Not found"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "b37990b8-afcf-4ae3-97d6-3d4093345a94",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
     },
     {
       "Parameters": {
@@ -180,6 +278,36 @@
     },
     {
       "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:504888428012:function:sdb38resellcc1-InvokeVfsIntegrationApiFunction:active",
+        "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "methodName": "getVoicemailDrop"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "0e447aca-1234-4a50-bc8f-c3c4a5c96b25",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "4de600cf-a471-4515-b79f-464b2807524c",
+        "Errors": [
+          {
+            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "993e1553-7ddc-42a5-b152-ee955051a563",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
         "ComparisonValue": "$.Attributes.VoicemailDrop"
       },
       "Identifier": "409c6c6a-7149-4591-8fe8-0c40d3fffb0d",
@@ -204,76 +332,6 @@
           }
         ]
       }
-    },
-    {
-      "Parameters": {
-        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:911600931250:function:resellSdb6OregCC1-InvokeSalesforceRestApiFunction:active",
-        "InvocationTimeLimitSeconds": "8",
-        "InvocationType": "SYNCHRONOUS",
-        "LambdaInvocationAttributes": {
-          "agentARN": "$.Attributes.AgentArn",
-          "methodName": "fetchDefaultVoicemailGreetingUrl"
-        },
-        "ResponseValidation": {
-          "ResponseType": "STRING_MAP"
-        }
-      },
-      "Identifier": "0e447aca-1234-4a50-bc8f-c3c4a5c96b25",
-      "Type": "InvokeLambdaFunction",
-      "Transitions": {
-        "NextAction": "4de600cf-a471-4515-b79f-464b2807524c",
-        "Errors": [
-          {
-            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "Media": {
-          "Uri": "$.External.GreetingUrl",
-          "SourceType": "S3",
-          "MediaType": "Audio"
-        }
-      },
-      "Identifier": "b37990b8-afcf-4ae3-97d6-3d4093345a94",
-      "Type": "MessageParticipant",
-      "Transitions": {
-        "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
-        "Errors": [
-          {
-            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {
-        "Attributes": {
-          "GreetingUrl": "$.External.GreetingUrl"
-        },
-        "TargetContact": "Current"
-      },
-      "Identifier": "4de600cf-a471-4515-b79f-464b2807524c",
-      "Type": "UpdateContactAttributes",
-      "Transitions": {
-        "NextAction": "b37990b8-afcf-4ae3-97d6-3d4093345a94",
-        "Errors": [
-          {
-            "NextAction": "993e1553-7ddc-42a5-b152-ee955051a563",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
-      }
-    },
-    {
-      "Parameters": {},
-      "Identifier": "993e1553-7ddc-42a5-b152-ee955051a563",
-      "Type": "DisconnectParticipant",
-      "Transitions": {}
     }
   ]
 }

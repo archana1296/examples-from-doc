@@ -27,6 +27,11 @@ reqPrimaryInstanceName	|Source Connect Instance Name should be set here. This is
 reqSecondaryInstanceName	|Replica Connect Instance Name should be set here. This is used to support global resiliency feature
 reqSCVHealthCheckRole  |This is optional field required to run AWS Health Check. Role name should have a format of "*-SCVHealthCheckRole" The format should be arn:aws:iam::<Customer Account Id>:role/<Prefix>-SCVHealthCheckRole
 reqSCVHealthCheckLambdaArn  |This is optional field required to run AWS Health Check in case of multiorg setup . The format of this field is arn:aws:lambda:us-west-2:<Customer Account Id>:function:<CSCVHealthCheckLambdaName>
+reqShowVendorStatusInfoAccess |This shows the provider status. Default value is true ,if you dont want the feature make it false.
+reqPresenceStatusSyncAccess |This is the Presence Status Sync Access.Default value is true ,if you dont want the feature make it false.
+reqEnhancedAgentStabilityAccess |Enable amazon connect sfdc_pending status.Default value is true ,if you dont want the feature make it false.
+reqAlwaysShowVoiceExtension |To show the voice extension.Default value is true ,if you dont want the feature make it false.
+reqTenantBucketWriteAccessRoleArn |This is arn for tenant bucket write access.
 
 
 

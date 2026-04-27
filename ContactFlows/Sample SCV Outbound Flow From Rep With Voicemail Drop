@@ -3,26 +3,20 @@
   "StartAction": "0e52b30a-5b99-48f4-98ae-19c4ded91eca",
   "Metadata": {
     "entryPointPosition": {
-      "x": 74.4,
-      "y": 20
+      "x": -240,
+      "y": -101.6
     },
     "ActionMetadata": {
       "0e52b30a-5b99-48f4-98ae-19c4ded91eca": {
         "position": {
-          "x": 178.4,
-          "y": 7.2
+          "x": -91.2,
+          "y": -103.2
         }
       },
-      "9dde974f-642d-4cd3-a8f2-a6353c0f72f5": {
+      "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b": {
         "position": {
-          "x": 423.2,
-          "y": 5.6
-        }
-      },
-      "b51f0b0a-e2ea-4883-976e-a5e7bf3028bf": {
-        "position": {
-          "x": 179.2,
-          "y": 181.6
+          "x": 916,
+          "y": 368.8
         }
       },
       "Sample SCV disconnect flow": {
@@ -40,13 +34,51 @@
         },
         "contactFlow": {
           "text": "Sample SCV disconnect flow",
-          "id": "arn:aws:connect:us-west-2:911600931250:instance/5fab4e62-f460-4a47-b1ef-0fa612680d23/contact-flow/4977ddab-4c9d-480c-b0b2-0a1d07b4e7be"
+          "id": "arn:aws:connect:us-west-2:241706222685:instance/8f566cb5-5cb9-4eb8-bba1-64ea7e420ba5/contact-flow/7dcfbb7c-6b36-411b-a39d-87df586ef83d"
         }
+      },
+      "1555c754-f95e-435d-8218-11ffab3a8456": {
+        "position": {
+          "x": 458.4,
+          "y": -120
+        },
+        "parameters": {
+          "CallerId": {
+            "Number": {
+              "inputOption": "dynamic"
+            }
+          }
+        },
+        "setOptionalCallerId": true,
+        "callerIdSource": "dynamic",
+        "useDynamicConnectionTimeout": false
+      },
+      "b51f0b0a-e2ea-4883-976e-a5e7bf3028bf": {
+        "position": {
+          "x": -114.4,
+          "y": 241.6
+        }
+      },
+      "10f1b581-64f4-4260-9249-04504ee015f4": {
+        "position": {
+          "x": 212.8,
+          "y": 121.6
+        },
+        "parameters": {
+          "Attributes": {
+            "outboundCallerId": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "outboundCallerId"
+        ]
       },
       "3c0b5d3c-1a1e-4822-8d75-7b5507166446": {
         "position": {
-          "x": 679.2,
-          "y": -2.4
+          "x": 678.4,
+          "y": -3.2
         },
         "parameters": {
           "Attributes": {
@@ -59,31 +91,32 @@
           "AgentArn"
         ]
       },
-      "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b": {
+      "5a60ab1a-2fae-4845-bae5-34207115fda3": {
         "position": {
-          "x": 916,
-          "y": 368.8
-        }
-      },
-      "7eef359e-8634-43f0-91ef-af78ce06d9e9": {
-        "position": {
-          "x": 670.4,
-          "y": 220
+          "x": 190.4,
+          "y": -112.8
         },
-        "dynamicParams": []
-      },
-      "2047b774-44ff-4e77-8f54-a60529fdd279": {
-        "position": {
-          "x": 443.2,
-          "y": 218.4
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "cc4-InvokeVfsIntegrationApiFunction:active"
+          },
+          "LambdaInvocationAttributes": {
+            "agentARN": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "agentARN": true,
+          "methodName": false
         }
       }
     },
     "Annotations": [],
     "name": "Sample SCV Outbound Flow From Rep With Voicemail Drop",
-    "description": "Makes an outbound call with the agent specified phone number and plays an audio recording when agents drops off from the call.",
+    "description": "Makes an outbound call with the agent specified phone number and plays the default audio recording when agents drops off from the call.",
     "type": "outboundWhisper",
-    "status": "published",
+    "status": "PUBLISHED",
     "hash": {}
   },
   "Actions": [
@@ -98,11 +131,37 @@
       }
     },
     {
+      "Parameters": {},
+      "Identifier": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
       "Parameters": {
-        "Text": "This call may be recorded for training purposes."
+        "EventHooks": {
+          "CustomerRemaining": "arn:aws:connect:us-west-2:241706222685:instance/8f566cb5-5cb9-4eb8-bba1-64ea7e420ba5/contact-flow/7dcfbb7c-6b36-411b-a39d-87df586ef83d"
+        }
       },
-      "Identifier": "9dde974f-642d-4cd3-a8f2-a6353c0f72f5",
-      "Type": "MessageParticipant",
+      "Identifier": "Sample SCV disconnect flow",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+        "Errors": [
+          {
+            "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "CallerId": {
+          "Number": "$.Attributes.outboundCallerId"
+        }
+      },
+      "Identifier": "1555c754-f95e-435d-8218-11ffab3a8456",
+      "Type": "CompleteOutboundCall",
       "Transitions": {
         "NextAction": "3c0b5d3c-1a1e-4822-8d75-7b5507166446"
       }
@@ -131,66 +190,46 @@
                 "RealTime"
               ]
             }
+          },
+          "SentimentConfiguration": {
+            "Enabled": "True"
           }
         }
       },
       "Identifier": "b51f0b0a-e2ea-4883-976e-a5e7bf3028bf",
       "Type": "UpdateContactRecordingBehavior",
       "Transitions": {
-        "NextAction": "9dde974f-642d-4cd3-a8f2-a6353c0f72f5"
-      }
-    },
-    {
-      "Parameters": {
-        "EventHooks": {
-          "CustomerRemaining": "arn:aws:connect:us-west-2:911600931250:instance/5fab4e62-f460-4a47-b1ef-0fa612680d23/contact-flow/4977ddab-4c9d-480c-b0b2-0a1d07b4e7be"
-        }
-      },
-      "Identifier": "Sample SCV disconnect flow",
-      "Type": "UpdateContactEventHooks",
-      "Transitions": {
-        "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
-        "Errors": [
-          {
-            "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
-            "ErrorType": "NoMatchingError"
-          }
-        ]
+        "NextAction": "5a60ab1a-2fae-4845-bae5-34207115fda3"
       }
     },
     {
       "Parameters": {
         "Attributes": {
-          "AgentArn": "$.Agent.ARN"
+          "outboundCallerId": "$.External.phoneNumber"
         },
         "TargetContact": "Current"
       },
-      "Identifier": "3c0b5d3c-1a1e-4822-8d75-7b5507166446",
+      "Identifier": "10f1b581-64f4-4260-9249-04504ee015f4",
       "Type": "UpdateContactAttributes",
       "Transitions": {
-        "NextAction": "2047b774-44ff-4e77-8f54-a60529fdd279",
+        "NextAction": "1555c754-f95e-435d-8218-11ffab3a8456",
         "Errors": [
           {
-            "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+            "NextAction": "3c0b5d3c-1a1e-4822-8d75-7b5507166446",
             "ErrorType": "NoMatchingError"
           }
         ]
       }
     },
     {
-      "Parameters": {},
-      "Identifier": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
-      "Type": "EndFlowExecution",
-      "Transitions": {}
-    },
-    {
       "Parameters": {
         "Attributes": {
+          "AgentArn": "$.Agent.ARN",
           "VoicemailDrop": "Enable"
         },
         "TargetContact": "Current"
       },
-      "Identifier": "7eef359e-8634-43f0-91ef-af78ce06d9e9",
+      "Identifier": "3c0b5d3c-1a1e-4822-8d75-7b5507166446",
       "Type": "UpdateContactAttributes",
       "Transitions": {
         "NextAction": "Sample SCV disconnect flow",
@@ -203,52 +242,25 @@
       }
     },
     {
-      "Parameters": {},
-      "Identifier": "2047b774-44ff-4e77-8f54-a60529fdd279",
-      "Type": "CheckOutboundCallStatus",
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-west-2:241706222685:function:cc5-InvokeVfsIntegrationApiFunction:active",
+        "InvocationTimeLimitSeconds": "8",
+        "InvocationType": "SYNCHRONOUS",
+        "LambdaInvocationAttributes": {
+          "agentARN": "$.Agent.ARN",
+          "methodName": "getDefaultOutboundPhoneNumber"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "5a60ab1a-2fae-4845-bae5-34207115fda3",
+      "Type": "InvokeLambdaFunction",
       "Transitions": {
-        "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
-        "Conditions": [
-          {
-            "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "CallAnswered"
-              ]
-            }
-          },
-          {
-            "NextAction": "7eef359e-8634-43f0-91ef-af78ce06d9e9",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "VoicemailBeep"
-              ]
-            }
-          },
-          {
-            "NextAction": "7eef359e-8634-43f0-91ef-af78ce06d9e9",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "VoicemailNoBeep"
-              ]
-            }
-          },
-          {
-            "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
-            "Condition": {
-              "Operator": "Equals",
-              "Operands": [
-                "NotDetected"
-              ]
-            }
-          }
-        ],
+        "NextAction": "10f1b581-64f4-4260-9249-04504ee015f4",
         "Errors": [
           {
-            "NextAction": "fe0cff31-99e2-4b4a-b1ec-ff7baa711d7b",
+            "NextAction": "3c0b5d3c-1a1e-4822-8d75-7b5507166446",
             "ErrorType": "NoMatchingError"
           }
         ]
